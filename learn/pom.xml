@@ -26,6 +26,12 @@
 	    <artifactId>future-converter-guava-common</artifactId>
 	    <version>1.0.0</version>
 	</dependency>
+	
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>httpclient</artifactId>
+	    <version>4.4-beta1</version>
+	</dependency>
   </dependencies>
   <build>
     <finalName>learn</finalName>
