@@ -247,35 +247,46 @@ public class HttpClientUtil {
     public static void main(String[] args) {
         // URL列表数组
         String[] urisToGet = {
-                "http://blog.csdn.net/catoop/article/details/38849497",
-                "http://blog.csdn.net/catoop/article/details/38849497",
-                "http://blog.csdn.net/catoop/article/details/38849497",
-                "http://blog.csdn.net/catoop/article/details/38849497",
-
-                "http://blog.csdn.net/catoop/article/details/38849497",
-                "http://blog.csdn.net/catoop/article/details/38849497",
-                "http://blog.csdn.net/catoop/article/details/38849497",
-                "http://blog.csdn.net/catoop/article/details/38849497",
-
-                "http://blog.csdn.net/catoop/article/details/38849497",
-                "http://blog.csdn.net/catoop/article/details/38849497",
-                "http://blog.csdn.net/catoop/article/details/38849497",
-                "http://blog.csdn.net/catoop/article/details/38849497",
-
-                "http://blog.csdn.net/catoop/article/details/38849497",
-                "http://blog.csdn.net/catoop/article/details/38849497",
-                "http://blog.csdn.net/catoop/article/details/38849497",
-                "http://blog.csdn.net/catoop/article/details/38849497",
-
-                "http://blog.csdn.net/catoop/article/details/38849497",
-                "http://blog.csdn.net/catoop/article/details/38849497",
-                "http://blog.csdn.net/catoop/article/details/38849497",
-                "http://blog.csdn.net/catoop/article/details/38849497",
-
-                "http://blog.csdn.net/catoop/article/details/38849497",
-                "http://blog.csdn.net/catoop/article/details/38849497",
-                "http://blog.csdn.net/catoop/article/details/38849497",
-                "http://blog.csdn.net/catoop/article/details/38849497" };
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//                "http://blog.csdn.net/catoop/article/details/38849497",
+//                "http://blog.csdn.net/catoop/article/details/38849497" }
+        		"http://www.baidu.com",
+        		"http://www.baidu.com",
+        		"http://www.baidu.com",
+        		"http://www.baidu.com",
+        		"http://www.baidu.com",
+        		"http://www.baidu.com",
+        		"http://www.baidu.com",
+        		"http://www.baidu.com",
+        		"http://www.baidu.com",
+        		"http://www.baidu.com",
+        		"http://www.baidu.com"};
 
         long start = System.currentTimeMillis();
         try {
