@@ -1,11 +1,31 @@
 package com.hector.learn;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class Test {
 
 	public static void main(String[] args) {
-		test1();
-		
+		//test1();
+		int i = -1;
+		System.out.println(i%2 ==1?"ÆæÊý":"Å¼Êý");
 		System.out.println("main end");
+		
+		Date d = new Date();
+		
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddhh");
+		
+		String ss = formatter.format(d);
+		System.out.println(ss);
+		
+		Calendar ca=Calendar.getInstance();
+		ca.setTime(d);
+		ca.add(Calendar.HOUR_OF_DAY, 1);
+		
+		System.out.println(formatter.format(ca.getTime()));
+		
+		
 	}
 	
 	
