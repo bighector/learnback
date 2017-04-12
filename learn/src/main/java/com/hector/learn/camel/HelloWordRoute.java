@@ -29,9 +29,12 @@ public class HelloWordRoute extends RouteBuilder {
 	@Override
 	public void configure() throws Exception {
 		//from("jetty:http://0.0.0.0:8282").to("direct:start");//http://127.0.0.1:8080?bridgeEndpoint=true
-		from("jetty:http://0.0.0.0:8282").to("http://127.0.0.1:9999/strategyTransaction/test?bridgeEndpoint=true");//http://127.0.0.1:9999/strategyTransaction/test?bridgeEndpoint=true
+		System.out.println("configure1");
+		System.out.println("configure2");
+		from("jetty:http://0.0.0.0:8282").process(new HttpProcessor()).to("http://127.0.0.1:9999/strategyTransaction/test?bridgeEndpoint=true");//http://127.0.0.1:9999/strategyTransaction/test?bridgeEndpoint=true
 //        .process(new HttpProcessor())
 //        .to("log:helloworld?showExchangeId=true");
+		System.out.println("configure end ");
 	}
 
 	private class HttpProcessor implements Processor{
@@ -46,7 +49,7 @@ public class HelloWordRoute extends RouteBuilder {
             // 存入到exchange的out区域
             if(exchange.getPattern() == ExchangePattern.InOut) {
                 Message outMessage = exchange.getOut();
-                outMessage.setBody(inputContext + " || out");
+                outMessage.setBody(inputContext);
             }
 			
 		}
