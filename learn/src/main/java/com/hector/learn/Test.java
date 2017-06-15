@@ -8,22 +8,24 @@ public class Test {
 
 	public static void main(String[] args) {
 		//test1();
-		int i = -1;
-		System.out.println(i%2 ==1?"奇数":"偶数");
-		System.out.println("main end");
+//		int i = -1;
+//		System.out.println(i%2 ==1?"奇数":"偶数");
+//		System.out.println("main end");
+//		
+//		Date d = new Date();
+//		
+//		SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddhh");
+//		
+//		String ss = formatter.format(d);
+//		System.out.println(ss);
+//		
+//		Calendar ca=Calendar.getInstance();
+//		ca.setTime(d);
+//		ca.add(Calendar.HOUR_OF_DAY, 1);
+//		
+//		System.out.println(formatter.format(ca.getTime()));
 		
-		Date d = new Date();
-		
-		SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddhh");
-		
-		String ss = formatter.format(d);
-		System.out.println(ss);
-		
-		Calendar ca=Calendar.getInstance();
-		ca.setTime(d);
-		ca.add(Calendar.HOUR_OF_DAY, 1);
-		
-		System.out.println(formatter.format(ca.getTime()));
+		test3();
 		
 		
 	}
@@ -46,4 +48,12 @@ public class Test {
 		
 		System.out.println("test2 start3!");
 	}	
+	
+	public static void test3(){
+		//int a = 0xabef0101;
+		//int a = 0x0C;
+		int a = 0xCAFE;
+		
+		System.out.println(a);
+	}
 }

@@ -7,7 +7,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>learn Maven Webapp</name>
 	<url>http://maven.apache.org</url>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<version.log4j>1.2.14</version.log4j>
@@ -16,137 +16,63 @@
 		<version.slf4j.jcl.over.slf4j>1.7.5</version.slf4j.jcl.over.slf4j>
 		<!-- camel -->
 		<camel.version>2.14.1</camel.version>
-		
+
 		<apache.curator.version>2.7.1</apache.curator.version>
 	</properties>
-	
-	<dependencies>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
 
-		<dependency>
-			<groupId>net.javacrumbs.future-converter</groupId>
-			<artifactId>future-converter-guava-common</artifactId>
-			<version>1.0.0</version>
-		</dependency>
+	<dependencies>
+		<!-- <dependency> <groupId>javax.servlet</groupId> <artifactId>javax.servlet-api</artifactId> 
+			<version>3.1.0</version> </dependency> <dependency> <groupId>junit</groupId> 
+			<artifactId>junit</artifactId> <version>3.8.1</version> <scope>test</scope> 
+			</dependency> <dependency> <groupId>net.javacrumbs.future-converter</groupId> 
+			<artifactId>future-converter-guava-common</artifactId> <version>1.0.0</version> 
+			</dependency> <dependency> <groupId>org.apache.httpcomponents</groupId> <artifactId>httpclient</artifactId> 
+			<version></version> </dependency> <dependency> <groupId>redis.clients</groupId> 
+			<artifactId>jedis</artifactId> <version>2.7.3</version> </dependency> <dependency> 
+			<groupId>org.apache.zookeeper</groupId> <artifactId>zookeeper</artifactId> 
+			<version>3.4.6</version> </dependency> -->
+
+		<!-- Logging -->
+		<!-- <dependency> <groupId>org.slf4j</groupId> <artifactId>slf4j-api</artifactId> 
+			<version>${version.slf4j.api}</version> <scope>compile</scope> </dependency> 
+			<dependency> <groupId>org.slf4j</groupId> <artifactId>jcl-over-slf4j</artifactId> 
+			<version>${version.slf4j.jcl.over.slf4j}</version> <scope>compile</scope> 
+			</dependency> <dependency> <groupId>org.slf4j</groupId> <artifactId>slf4j-log4j12</artifactId> 
+			<version>${version.slf4j.log4j12}</version> <scope>compile</scope> </dependency> 
+			<dependency> <groupId>log4j</groupId> <artifactId>log4j</artifactId> <version>${version.log4j}</version> 
+			<scope>compile</scope> </dependency> <dependency> <groupId>org.aspectj</groupId> 
+			<artifactId>aspectjrt</artifactId> <version>1.7.4</version> <scope>compile</scope> 
+			</dependency> <dependency> <groupId>org.aspectj</groupId> <artifactId>aspectjweaver</artifactId> 
+			<version>1.7.4</version> <scope>compile</scope> </dependency> -->
+
+		<!-- <dependency> <groupId>org.apache.camel</groupId> <artifactId>camel-core</artifactId> 
+			<version>${camel.version}</version> </dependency> 其他都是为了支撑各种系统的通信准备的 <dependency> 
+			<groupId>org.apache.camel</groupId> <artifactId>camel-jetty</artifactId> 
+			<version>${camel.version}</version> </dependency> <dependency> <groupId>org.apache.camel</groupId> 
+			<artifactId>camel-netty4</artifactId> <version>${camel.version}</version> 
+			</dependency> <dependency> <groupId>org.apache.camel</groupId> <artifactId>camel-http</artifactId> 
+			<version>${camel.version}</version> </dependency> <dependency> <groupId>org.apache.camel</groupId> 
+			<artifactId>camel-jackson</artifactId> <version>${camel.version}</version> 
+			</dependency> <dependency> <groupId>org.apache.camel</groupId> <artifactId>camel-jms</artifactId> 
+			<version>${camel.version}</version> </dependency> <dependency> <groupId>org.apache.camel</groupId> 
+			<artifactId>camel-jsonpath</artifactId> <version>${camel.version}</version> 
+			</dependency> -->
+		<!-- <dependency> <groupId>org.apache.curator</groupId> <artifactId>curator-x-discovery</artifactId> 
+			<version>${apache.curator.version}</version> <exclusions> <exclusion> <groupId>io.netty</groupId> 
+			<artifactId>netty</artifactId> </exclusion> </exclusions> </dependency> -->
+
+
 
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<version>4.4-beta1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>redis.clients</groupId>
-			<artifactId>jedis</artifactId>
-			<version>2.7.3</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.zookeeper</groupId>
-			<artifactId>zookeeper</artifactId>
-			<version>3.4.6</version>
-		</dependency>
-
-		<!-- Logging -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>${version.slf4j.api}</version>
-			<scope>compile</scope>
+			<artifactId>httpcore</artifactId>
+			<version>4.4.4</version>
 		</dependency>
 		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jcl-over-slf4j</artifactId>
-			<version>${version.slf4j.jcl.over.slf4j}</version>
-			<scope>compile</scope>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
+			<version>4.1.12.Final</version>
 		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>${version.slf4j.log4j12}</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>${version.log4j}</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjrt</artifactId>
-			<version>1.7.4</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjweaver</artifactId>
-			<version>1.7.4</version>
-			<scope>compile</scope>
-		</dependency>
-
-		<!-- 核心包就一个 -->
-		<dependency>
-			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-core</artifactId>
-			<version>${camel.version}</version>
-		</dependency>
-
-		<!-- 其他都是为了支撑各种系统的通信准备的 -->
-		<dependency>
-			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-jetty</artifactId>
-			<version>${camel.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-netty4</artifactId>
-			<version>${camel.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-http</artifactId>
-			<version>${camel.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-jackson</artifactId>
-			<version>${camel.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-jms</artifactId>
-			<version>${camel.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-jsonpath</artifactId>
-			<version>${camel.version}</version>
-		</dependency>
-		
-		
-		<dependency>
-            <groupId>org.apache.curator</groupId>
-            <artifactId>curator-x-discovery</artifactId>
-            <version>${apache.curator.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>io.netty</groupId>
-                    <artifactId>netty</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
 	</dependencies>
 	<build>
 		<finalName>learn</finalName>
